@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-main: #853b3b;
+  --bg-card: #2d2727;
+  --border-color: #efc745;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  height: 100vh;
+  background-color: var(--bg-main);
+}
+
+h1 {
+  color: rgb(22, 22, 124);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 4rem;
+  text-align: center;
+}
+
+
+
+#card-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+ }
+/* 
+.card{
+    width:5rem;
+    height:5rem;
+    background-color: var(--bg-card);
+    border-radius: .6rem;
+    background-size: cover;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 2rem;
+
+}
+
+.card_style{
+    border-radius: 0.6rem;
+    border: 2px solid var(--border-color);
+} */
+
+/* .matchCard{
+    border: 2px solid purple;
+}  */
+
+.card {
+  position: relative;
+  transition: all 0.4s linear;
+  transform-style: preserve-3d;
+}
+
+.card,
+.back-div,
+.front-div {
+  height: 5rem;
+  width: 5rem;
+}
+
+.back-div,
+.front-div {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front-div {
+  background-color: var(--border-color);
+  background-size: contain;
+  border-radius: 0.3rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 2rem;
+}
+
+.back-div {
+  transform: rotateY(180deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 0.3rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 2rem;
+}
+
+.card_select {
+  transform: rotateY(180deg);
+}
+
+.matchCard .front-div {
+  background-color: var(--bg-card);
+}
