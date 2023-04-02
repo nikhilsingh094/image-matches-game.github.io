@@ -35,6 +35,19 @@ let parentDiv = document.querySelector("#card-box");
 const gameBox = boxArray.concat(boxArray);
 let shuffle = Array.from(gameBox).sort(() => 0.5 - Math.random());
 
+function timer(){
+  var sec = 30;
+  var timer = setInterval(function(){
+      document.getElementById('timer-display').innerHTML='00:'+sec;
+      sec--;
+      if (sec < 0) {
+          clearInterval(timer);
+      }
+  }, 1000);
+}
+
+timer();
+
 let count = 0;
 let firstCard = "";
 let secondCard = "";
