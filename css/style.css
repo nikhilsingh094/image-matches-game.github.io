@@ -21,7 +21,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100%;
+    height: 100vh;
     padding-bottom: 3rem;
     padding-top: 3rem;
   
@@ -50,8 +50,8 @@ span{
 
 #card-box {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap:1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:0.8rem;
  }
  #safeTimerDisplay{
   text-align: center;
